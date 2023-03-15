@@ -1,6 +1,7 @@
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, Frame
 import re
 from text import text
@@ -15,20 +16,26 @@ ask = str(input("Nome do arquivo: ")).strip()
 pdf_file = f"{ask}.pdf"
 c = canvas.Canvas('C:/Users/netos/OneDrive/Documentos/Readable PDF files/'+pdf_file, pagesize=letter)
 
-# Define the paragraph style for the normal text
-normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=12)
+# Define the paragraph style for the text
+normal_style = ParagraphStyle(name='Normal', fontName='Helvetica', fontSize=11, leading=22)
 
 # Set the margins and dimensions of the frame to fit the page
-x, y = 0, 0
-width, height = letter[0], letter[1]
+x, y = 1*inch, 0.5*inch
+width, height = letter[0]-2.2*inch, letter[1]-1.5*inch
 frame = Frame(x, y, width, height, showBoundary=0)
 
 # Create a new paragraph object and add it to the frame
 lines = text.splitlines()
+indent = '&nbsp;&nbsp;&nbsp;'
+is_first_line = True
 
 formatted_text = ''
 for line in lines:
     if line.strip():
+        if is_first_line:
+            formatted_text += indent*4
+            if_first_line = False
+
         words = re.findall(r'\S+|\s+', line)
         for l in range(len(words)):
             if words[l].isspace():
@@ -43,7 +50,7 @@ for line in lines:
                         index_to_bold = 1
                     else:
                         index_to_bold = len(word) // 2
-                    formatted_word = f"<font size='7'>{number}</font><b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
+                    formatted_word = f"{number}<b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
                 else:
                     # word doesn't start with a number
                     index_to_bold = len(words[l]) // 2
@@ -57,6 +64,7 @@ for line in lines:
                             formatted_word += letter
                 formatted_text += formatted_word
         formatted_text += '<br/>'
+        is_first_line = True
 
 paragraph = Paragraph(formatted_text, normal_style)
 frame.addFromList([paragraph], c)
