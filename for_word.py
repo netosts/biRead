@@ -28,12 +28,10 @@ frame = Frame(x, y, width, height, showBoundary=0)
 def create_paragraph(text):
     # Create a new paragraph object and add it to the frame
     lines = text.splitlines()
-    indent = '&nbsp;&nbsp;&nbsp;'
 
     formatted_text = ''
     for line in lines:
         if line.strip():
-            formatted_text += indent*4 # indent the first line of each paragraph
 
             words = line.split()
             for l in range(len(words)):
