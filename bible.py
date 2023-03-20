@@ -3,17 +3,17 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, Frame
-from text import text, text2
+from the_text import txt
 import re
 
 
 # This is the text that will be formatted
-# to change the text, go to text.py and change it there
-text = text
+# to change the text, go to the_text.py and change it there
+text = txt
 
 # Create a new PDF file
-ask = str(input("Nome do arquivo: ")).strip()
-pdf_file = f"{ask}.pdf"
+file_name = str(input("Nome do arquivo: ")).strip()
+pdf_file = f"{file_name}.pdf"
 c = canvas.Canvas('C:/Users/netos/OneDrive/Documentos/Readable PDF files/'+pdf_file, pagesize=letter)
 
 # Define the paragraph style for the text
@@ -27,12 +27,12 @@ frame = Frame(x, y, width, height, showBoundary=0)
 
 # Define a function to create a formatted paragraph
 def create_paragraph(text):
-    lines = text.splitlines()
+    lines = text.splitlines() # create list of paragraphs
 
     formatted_text = ''
     for line in lines:
         if line.strip():
-            words = re.findall(r'\S+|\s+', line)
+            words = re.findall(r'\S+|\s+', line) # separate the words in each paragraph
             for l in range(len(words)):
                 if words[l].isspace():
                     formatted_text += words[l]
@@ -40,6 +40,7 @@ def create_paragraph(text):
                     match = re.match(r'^(\d+)(\D.*)', words[l])
                     if match:
                         # word starts with a number, split it into two parts
+                        # format the numbers and words separately
                         number = match.group(1)
                         word = match.group(2)
                         index_to_bold = len(word) // 2
@@ -57,6 +58,8 @@ def create_paragraph(text):
                                     formatted_word += '<b>' + letter + '</b>'
                                 elif len(words[l]) == 1:
                                     formatted_word += '<b>' + letter + '</b>'
+                                elif words[l][0] in '“' and i == 1:
+                                    formatted_word += '<b>' + letter + '</b>'
                                 else:
                                     formatted_word += letter
                             else:
@@ -64,6 +67,7 @@ def create_paragraph(text):
                     formatted_text += formatted_word + ' '
             formatted_text += '<br/>'
     return formatted_text
+
 
 # Split the text into paragraphs
 paragraphs = text.split('\n')
