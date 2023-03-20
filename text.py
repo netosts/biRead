@@ -1,15 +1,58 @@
 
+text = """1Assim foram concluídos os céus e a terra, e ­tudo o que neles há.
 
+2No sétimo dia Deus já havia concluído a obra que realizara, e nesse dia descansou.
 
-text = """
-Uma das principais características da teologia adventista é a interpretação historicista das profecias apocalípticas das Escrituras fundamentada no assim chamado princípio dia-ano de interpretação profética.2 Baseado na ideia de que cada dia profético representa um ano literal, as 70 semanas de Daniel 9:24-27 devem ser vistas como sendo 490 anos; os 1.260 dias de Apocalipse 11:3 e 12:6 (ver também Dn 7:25; 12:7; Ap 11:2; 12:14; 13:5), como sendo 1.260 anos; os 1.290 dias de Daniel 12:11, como sendo 1.290 anos; os 1.335 dias de Daniel 12:12, como sendo 1.335 anos; e as 2.300 “tardes e manhãs” de Daniel 8:14,3 como sendo 2.300 anos.
+3A­bençoou Deus o sétimo dia e o santificou, por­que nele descansou de toda a obra que realizara na criação.
 
-Tradicionalmente, os adventistas do sétimo dia apontam o ano 508 d.C. como sendo o início dos 1.290 e dos 1.335 anos, e, 30 anos depois, o ano 538 d.C. como sendo o início dos 1.260 anos.4 A principal data de referência para esses cálculos tem sido o ano de 1798 d.C., quando o papa Pio VI foi capturado e aprisionado na França, vindo a morrer no exílio.5 Subtraindo os 1.260 anos de 1798, os intérpretes adventistas chegaram até o ano de 538. Tirando 1.290 anos de 1798, eles chegaram ao ano de 508. Enquanto que os 1.290 e os 1.260 anos tiveram seu término no mesmo ano de 1798, os 1.335 anos são contados como terminando 45 anos depois, entre 1843-1844 (veja o diagrama abaixo).
+4Esta é a história das origens dos céus e da terra, no tempo em que foram criados:
+Quando o Senhor Deus fez a terra e os céus,
 
-Embora a data de 1798 esteja bem estabelecida pelo importante evento que foi o aprisionamento do papa, o significado de 508 e 538 tem sido questionado por diversos intérpretes críticos que consideram essas datas como destituídas de um sentido histórico mais relevante.6 Mas, se vistas dentro do amplo contexto de estabelecimento da supremacia papal, as datas tomam sentido como importantes expressões desse processo.
+5ainda não tinha brotado nenhum arbusto no campo, e nenhuma plan­ta havia germinado, porque o ­Senhor Deus ainda não tinha feito chover sobre a terra, e tam­bém não havia ho­mem para cultivar o solo.
 
-Entre os estudos mais relevantes das fontes históricas que sustentam essas datas figuram os de Uriah Smith, intitulado The Prophecies of Daniel and the Revelation (1944),7 e a dissertação de mestrado de C. Mervyn Maxwell, sob o título “An Exegetical and Historical Examination of the Beginning and Ending of the 1260 Days of Prophecy with Special Attention Given to A.D. 538 and 1798 as Initial and Terminal Dates” (1951).8 Mas parece evidente que essas investigações poderiam ser ampliadas, levando-se em consideração uma perspectiva histórica mais ampla.
-"""
+6Todavia brotava água da terra e irrigava toda a superfície do solo.
+
+7Então o Senhor Deus for­mou o homem do pó da terra e soprou em suas narinas o fôlego de vida, e o homem se tornou um ser vivente.
+
+8Ora, o Senhor Deus tinha plantado um jardim no Éden, para os lados do leste, e ali co­locou o homem que formara.
+
+9Então o Senhor Deus fez nascer do solo todo tipo de árvores agradáveis aos olhos e boas para alimento. E no meio do jardim estavam a árvore da vida e a árvore do conhecimento do bem e do mal.
+
+10No Éden nascia um rio que irrigava o jardim, e depois se dividia em quatro.
+
+11O nome do primeiro é Pisom. Ele percorre toda a terra de Havilá, onde existe ouro.
+
+12O ouro daquela terra é excelente; lá também existem o bdélio e a pedra de ônix.
+
+13O segundo, que percorre toda a terra de Cuxe, é o Giom.
+
+14O terceiro, que corre pelo lado leste da Assíria, é o Tigre. E o quar­to rio é o Eufrates.
+
+15O Senhor Deus colocou o homem no jardim do Éden para cuidar dele e cultivá-lo.
+
+16E o Senhor Deus ordenou ao homem: "Coma livre­mente de qual­quer árvore do jardim,
+
+17mas não coma da árvore do conheci­mento do bem e do mal, porque no dia em que dela comer, certa­mente você morrerá".
+
+18Então o Senhor Deus declarou: "Não é bom que o homem esteja só; farei para ele al­guém que o auxilie e lhe corresponda".
+
+19De­pois que formou da terra todos os animais do campo e todas as aves do céu, o Senhor Deus os trouxe ao homem para ver como este lhes chamaria; e o nome que o homem desse a cada ser vivo, esse seria o seu nome.
+
+20As­sim o homem deu nomes a todos os rebanhos domésticos, às aves do céu e a todos os animais selvagens. Todavia não se encontrou para o homem alguém que o auxiliasse e lhe correspondesse.
+
+21Então o Senhor Deus fez o homem cair em profundo sono e, enquanto este dormia, tirou-lhe uma das costelas, fechando o lugar com carne.
+
+22Com a costela que havia tirado do homem, o Senhor Deus fez uma mulher e a levou até ele.
+
+23Disse então o homem:
+"Esta, sim, é osso dos meus ossos
+e carne da minha carne!
+Ela será chamada mulher,
+porque do homem foi tirada".
+
+24Por essa razão, o homem deixará pai e mãe e se unirá à sua mulher, e eles se tornarão uma só carne.
+
+25O homem e sua mulher viviam nus, e não sentiam vergonha."""
 
 text2 = """
 Roupas de Pele: “O Senhor Deus fez roupas de pele e com elas vestiu Adão e sua mulher” (Gênesis 3:21) A Graça começou no próprio Éden – ali começou a Misericórdia de Deus por nós.
