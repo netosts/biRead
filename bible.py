@@ -17,7 +17,7 @@ pdf_file = f"{ask}.pdf"
 c = canvas.Canvas('C:/Users/netos/OneDrive/Documentos/Readable PDF files/'+pdf_file, pagesize=letter)
 
 # Define the paragraph style for the text
-normal_style = ParagraphStyle(name='Normal', fontName='Helvetica', fontSize=12, leading=22, splitLongWords=False)
+normal_style = ParagraphStyle(name='Normal', fontName='Helvetica', fontSize=12, leading=18, splitLongWords=False)
 
 # Set the margins and dimensions of the frame to fit the page
 x, y = 1*inch, 0.8*inch
@@ -44,18 +44,21 @@ def create_paragraph(text):
                         word = match.group(2)
                         index_to_bold = len(word) // 2
                         if len(word) == 1:
-                            formatted_word = f"{number} - <b>{word}</b>"
+                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word}</b>"
                         else:
-                            formatted_word = f"{number} - <b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
+                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
                     else:
                         # word doesn't start with a number
                         index_to_bold = len(words[l]) // 2
                         formatted_word = ''
                         for i, letter in enumerate(words[l]):
-                            if i < index_to_bold:
-                                formatted_word += '<b>' + letter + '</b>'
-                            elif len(words[l]) == 1:
-                                formatted_word += '<b>' + letter + '</b>'
+                            if letter.isalpha():
+                                if i < index_to_bold:
+                                    formatted_word += '<b>' + letter + '</b>'
+                                elif len(words[l]) == 1:
+                                    formatted_word += '<b>' + letter + '</b>'
+                                else:
+                                    formatted_word += letter
                             else:
                                 formatted_word += letter
                     formatted_text += formatted_word + ' '
