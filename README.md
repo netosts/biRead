@@ -19,5 +19,5 @@ The program will receive any text and transform it into a "bionic text", making 
 To use this program, just go to "the_text.py" and paste the text in the variable "txt" as a docstring. Then you just need to run the program and choose the name of the archive (Nome do arquivo). The PDF file will appear in the program's directory.
 If you want to change the letters formatation you can change this piece of code: normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=10, leading=18). "fontName='Courier'", you can change it to Helvetica or Times-Roman(which i don't recommend).
 
-This conde has only one problem, if the paragraph of the inputed text is TOO BIG, it will be ignored and will not appear in the PDF file. The only way i found to make a quick fix to this problem was by decreasing the font size and then editing it in Microsoft Word afterward.
+This code has only one problem, if the paragraph of the inputed text is TOO BIG, it will be ignored and will not appear in the PDF file. The only way i found to make a quick fix to this problem was by decreasing the font size and then editing it in Microsoft Word afterward.
 Ex: normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=2, leading=6), you can see the fontSize is just so little and the spacing(leading) also is too small.
