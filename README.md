@@ -9,6 +9,7 @@ Esse código tem um único problema, se um paragrafo do texto colocado for MUITO
 A única forma que encontrei de consertar esse problema foi fazendo uma gambiarra, fazendo o texto ser formatado em uma font size bem pequena pra encaixar no tamanho da página.
 Ex: normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=2, leading=6), perceba o tamanho da fontSize e o leading(espaçamento).
 Depois disso eu edito o tamanho da letra no word e fica tudo show de bola. Mas isso é péssimo pra um usuário final por exemplo.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 [EN-US]

@@ -33,7 +33,7 @@ def bionic_text(text):
     formatted_text = ''
     for line in lines:
         if line.strip():
-            words = re.findall(r'\S+|\s+', line) # separate the words in each paragraph
+            words = re.findall(r'\S+|\s+', line)  # separate the words in each paragraph
             for l in range(len(words)):
                 if words[l].isspace():
                     formatted_text += words[l]
@@ -45,7 +45,7 @@ def bionic_text(text):
                         number = match.group(1)
                         word = match.group(2)
                         index_to_bold = len(word) // 2
-                        if len(word) == 1:
+                        if len(word) == 1:  # special numbers
                             formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word}</b>"
                         else:
                             formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
