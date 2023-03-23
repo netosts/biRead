@@ -3,20 +3,20 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import Paragraph, Frame
-from the_text import text2
+from the_text import txt
 
 
 # This is the text that will be formatted
 # to change the text, go to text.py and change it there
-text = text2
+text = txt
 
 # Create a new PDF file
 ask = str(input("Nome do arquivo: ")).strip()
 pdf_file = f"{ask}.pdf"
-c = canvas.Canvas('C:/Users/netos/OneDrive/Documentos/Readable PDF files/'+pdf_file, pagesize=letter)
+c = canvas.Canvas(pdf_file, pagesize=letter)
 
 # Define the paragraph style for the text
-normal_style = ParagraphStyle(name='Normal', fontName='Helvetica', fontSize=2, leading=22, splitLongWords=False)
+normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=10, leading=18)
 
 # Set the margins and dimensions of the frame to fit the page
 x, y = 1*inch, 0.8*inch
@@ -24,15 +24,16 @@ width, height = letter[0]-2.2*inch, letter[1]-1.5*inch
 frame = Frame(x, y, width, height, showBoundary=0)
 
 
-# Define a function to create a formatted text with a list of words
+# Define a function to create a formatted text
 def bionic_text(text):
     # Split text in paragraphs
     lines = text.splitlines()
     indent = '&nbsp;&nbsp;&nbsp;'
 
-    formatted_text = list()
+    formatted_text = ''
     for line in lines:
         if line.strip():
+            formatted_text += indent*2 # indent first line of each paragraph
             # split paragraphs in words to format it
             words = line.split()
             for l in range(len(words)):
@@ -51,20 +52,18 @@ def bionic_text(text):
                             formatted_word += letter
                     else:
                         formatted_word += letter
-                if l == 0:  # indent the first line of each paragraph
-                    formatted_text.append(indent*4 + formatted_word + ' ')
-                elif l == (len(words) - 1):  # break line at the end of paragraph
-                    formatted_text.append(formatted_word + '<br/>')
-                else:
-                    formatted_text.append(formatted_word + ' ')
-    return formatted_text  # return the list of words
+                formatted_text += formatted_word + ' '
+            formatted_text += '<br/>'
+    return formatted_text
 
 
-# Iterate through the words and add them to the canvas
-words = bionic_text(text).split()
-for w in words:
+# Split the text into paragraphs
+paragraphs = text.split('\n')
+
+# Iterate through the paragraphs and add them to the canvas
+for p in paragraphs:
     # Create a new paragraph object and add it to the frame
-    paragraph = Paragraph(w, normal_style)
+    paragraph = Paragraph(bionic_text(p), normal_style)
 
     # Check if the paragraph fits in the current frame
     if frame.add(paragraph, c):
