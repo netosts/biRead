@@ -63,6 +63,8 @@ def bionic_text(text):
                                     formatted_word += '<b>' + letter + '</b>'
                                 else:
                                     formatted_word += letter
+                            elif letter.isdigit():
+                                formatted_word += f"<sup><font size='8'>{letter}</font></sup>"
                             else:
                                 formatted_word += letter
                     formatted_text += formatted_word + ' '
