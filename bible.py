@@ -46,9 +46,9 @@ def bionic_text(text):
                         word = match.group(2)
                         index_to_bold = len(word) // 2
                         if len(word) == 1:
-                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word}</b>"
+                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <strong>{word}</strong>"
                         else:
-                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <b>{word[:index_to_bold]}</b>{word[index_to_bold:]}"
+                            formatted_word = f"<sup><font size='8'>{number}</font></sup> <strong>{word[:index_to_bold]}</strong>{word[index_to_bold:]}"
                     else:
                         # word doesn't start with a number
                         index_to_bold = len(words[l]) // 2
@@ -56,11 +56,11 @@ def bionic_text(text):
                         for i, letter in enumerate(words[l]):
                             if letter.isalpha():
                                 if i < index_to_bold:
-                                    formatted_word += '<b>' + letter + '</b>'
+                                    formatted_word += '<strong>' + letter + '</strong>'
                                 elif len(words[l]) == 1:
-                                    formatted_word += '<b>' + letter + '</b>'
+                                    formatted_word += '<strong>' + letter + '</strong>'
                                 elif words[l][0] in '“' and i == 1:
-                                    formatted_word += '<b>' + letter + '</b>'
+                                    formatted_word += '<strong>' + letter + '</strong>'
                                 else:
                                     formatted_word += letter
                             elif letter.isdigit():

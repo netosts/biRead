@@ -16,7 +16,7 @@ pdf_file = f"{ask}.pdf"
 c = canvas.Canvas(pdf_file, pagesize=letter)
 
 # Define the paragraph style for the text
-normal_style = ParagraphStyle(name='Normal', fontName='Courier', fontSize=10, leading=18)
+normal_style = ParagraphStyle(name='Normal', fontName='Helvetica', fontSize=10, leading=20)
 
 # Set the margins and dimensions of the frame to fit the page
 x, y = 1*inch, 0.8*inch
@@ -43,11 +43,11 @@ def bionic_text(text):
                 for i, letter in enumerate(words[l]):
                     if letter.isalpha():  # check if letter is a word character
                         if i < index_to_bold:
-                            formatted_word += '<b>' + letter + '</b>'
+                            formatted_word += '<strong>' + letter + '</strong>'
                         elif len(words[l]) == 1:
-                            formatted_word += '<b>' + letter + '</b>'
+                            formatted_word += '<strong>' + letter + '</strong>'
                         elif words[l][0] in '“' and i == 1:
-                            formatted_word += '<b>' + letter + '</b>'
+                            formatted_word += '<strong>' + letter + '</strong>'
                         else:
                             formatted_word += letter
                     else:
